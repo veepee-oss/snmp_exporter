@@ -316,12 +316,12 @@ $(MIBDIR)/LIEBERT_GP_PDU.MIB:
 	@unzip -j -d $(MIBDIR) $(TMP) LIEBERT_GP_PDU.MIB LIEBERT_GP_REG.MIB
 	@rm -v $(TMP)
 
-$(MIBDIR)/EATON-EPDU-MIB.txt $(MIBDIR)/EATON-SENSOR-MIB.txt:
-	$(eval TMP := $(shell mktemp))
-	@echo ">> Downloading EATON-EPDU-MIB.txt to $(TMP)"
-	@curl $(CURL_OPTS) -o $(TMP) $(EATON_URL)
-	@unzip -j -d $(MIBDIR) $(TMP) EATON-EPDU-MIB.txt EATON-SENSOR-MIB.txt
-	@rm -v $(TMP)
+#$(MIBDIR)/EATON-EPDU-MIB.txt $(MIBDIR)/EATON-SENSOR-MIB.txt:
+#	$(eval TMP := $(shell mktemp))
+#	@echo ">> Downloading EATON-EPDU-MIB.txt to $(TMP)"
+#	@curl $(CURL_OPTS) -o $(TMP) $(EATON_URL)
+#	@unzip -j -d $(MIBDIR) $(TMP) EATON-EPDU-MIB.txt EATON-SENSOR-MIB.txt
+#	@rm -v $(TMP)
 
 $(MIBDIR)/EATON-OIDS.txt:
 	@echo ">> Downloading EATON-OIDS.txt to $@"
